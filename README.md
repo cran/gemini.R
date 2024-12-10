@@ -1,7 +1,7 @@
-
-# gemini.R
+# gemini.R <img alt='hexlogo' src = 'https://github.com/user-attachments/assets/331ba265-9852-4ca5-9c9a-ff19b9e494b3' width = 120 align = 'right'></img>
 
 <!-- badges: start -->
+[![CRAN status badge](https://www.r-pkg.org/badges/version/gemini.R)](https://CRAN.R-project.org/package=gemini.R)
 ![r-hub](https://github.com/jhk0530/gemini.R/actions/workflows/rhub.yaml/badge.svg)
 [![gemini.R status badge](https://jhk0530.r-universe.dev/badges/gemini.R)](https://jhk0530.r-universe.dev/gemini.R)
 <!-- badges: end -->
@@ -12,21 +12,29 @@ R package to use Google's gemini via API on R
 
 ## Installation
 
-You can install the development version of gemini.R from GitHub with:
-
-``` r
-# install.packages("pak")
-pak::pak("jhk0530/gemini.R")
+#### From CRAN
+```r
+install.packages("gemini.R")
 ```
 
-Or install from [R-universe](https://r-universe.dev/search/)
+#### From [R-universe](https://r-universe.dev/search) (development version)
+
 ```r
 install.packages("gemini.R",
   repos = c("https://jhk0530.r-universe.dev", "https://cloud.r-project.org")
 )
 ```
 
-## Example
+#### From Github (development version)
+
+``` r
+# install.packages("pak")
+pak::pak("jhk0530/gemini.R")
+```
+
+## Usage
+
+#### gemini with text
 
 ``` r
 library(gemini.R)
@@ -40,7 +48,7 @@ gemini("Explain about the gemini in astrology in one line")
 
 ```
 
-## gemini with image
+#### gemini with image
 
 ``` r
 
@@ -56,7 +64,7 @@ gemini_image(image = system.file("docs/reference/figures/image.png", package = "
 
 ```
 
-## gemini with image via Shiny
+#### gemini with image via Shiny
 
 To use `gemini_image` function, image file required. 
 and I recommend to use shiny app with `fileInput` function.
@@ -108,8 +116,25 @@ shinyApp(ui = ui, server = server)
 
 ```
 <p style = 'text-align:center;'>
-  <img src='./man/figures/shiny.png' width = '70%'>
+  <img alt='shiny app example' src='./man/figures/shiny.png' width = '70%'>
 </p>
+
+#### gemini for roxygen documentation (Addin)
+
+<p style = 'text-align:center;'>
+  <img alt='gen_doc example' src='./man/figures/roxygen.gif' width = '70%'>
+</p>
+
+You may customize keyboard shortcut for this feature.
+
+## Terms
+
+Before use the API, I recommend that you to check at least the following.
+- [Google Cloud Platform Terms of Service](https://cloud.google.com/terms)
+- [Gemini API Additional Terms of Service](https://ai.google.dev/gemini-api/terms)
+
+There may be more terms and conditions that you need to check.
+Any app which uses the API should be compliant with the Google Terms of Service.
 
 > [!note] 
 >
