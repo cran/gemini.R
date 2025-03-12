@@ -4,7 +4,12 @@
 \alias{token.vertex}
 \title{Generate Gemini Access Token and Endpoint URL}
 \usage{
-token.vertex(jsonkey = NULL, model_id = NULL, expTime = 3600)
+token.vertex(
+  jsonkey = NULL,
+  model_id = NULL,
+  expTime = 3600,
+  region = "us-central1"
+)
 }
 \arguments{
 \item{jsonkey}{A path to JSON file containing the service account key from Vertex AI.}
@@ -12,6 +17,9 @@ token.vertex(jsonkey = NULL, model_id = NULL, expTime = 3600)
 \item{model_id}{The ID of the Gemini model. This will be prepended with "gemini-".}
 
 \item{expTime}{The expiration time of the access token in seconds (default is 3600 seconds, or 1 hour).}
+
+\item{region}{The Google Cloud region where your Vertex AI resources are located (default is "us-central1").
+See https://cloud.google.com/vertex-ai/docs/general/locations for available regions.}
 }
 \value{
 A list containing:
@@ -26,7 +34,8 @@ Generates an access token for the Gemini model and constructs the corresponding 
 library(gemini.R)
 tokens <- token.vertex(jsonkey = "YOURAPIKEY.json", model_id = "1.5-flash")
 
+# Specify a different region
+tokens <- token.vertex(jsonkey = "YOURAPIKEY.json", model_id = "1.5-flash", region = "europe-west4")
 }
-
 
 }
