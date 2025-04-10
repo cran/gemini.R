@@ -1,6 +1,6 @@
 Package: gemini.R
 Title: Interface for 'Google Gemini' API
-Version: 0.11.0
+Version: 0.12.0
 Authors@R: c(
   person("Jinhwan", "Kim", , "hwanistic@gmail.com", role = c("aut", "cre", "cph"), comment = c(ORCID = "0009-0009-3217-2417")),
   person("Maciej", "Nasinski", role = "ctb"))
@@ -21,8 +21,8 @@ Suggests: testthat (>= 3.0.0)
 Config/testthat/edition: 3
 Config/Needs/website: rmarkdown
 NeedsCompilation: no
-Packaged: 2025-03-29 05:57:54 UTC; jinhwan
+Packaged: 2025-04-10 09:04:01 UTC; jinhwan
 Author: Jinhwan Kim [aut, cre, cph] (<https://orcid.org/0009-0009-3217-2417>),
   Maciej Nasinski [ctb]
 Repository: CRAN
-Date/Publication: 2025-03-29 06:20:02 UTC
+Date/Publication: 2025-04-10 10:10:02 UTC
